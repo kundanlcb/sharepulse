@@ -1,0 +1,48 @@
+<!-- res/layout/item_post.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical">
+
+    <!-- Include Upper Part -->
+    <include
+        android:id="@+id/layout_upper"
+        layout="@layout/feed_upper"/>
+
+    <!-- Middle Part: Content of Post -->
+    <TextView
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:id="@+id/pollQuestionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_text"
+        app:layout_constraintTop_toBottomOf="@+id/layout_upper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_lower"/>
+    <!-- RecyclerView for  Poll Options -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:id="@+id/optionsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Include Lower Part -->
+    <include
+        android:id="@+id/layout_lower"
+        layout="@layout/feed_lower"/>
+
+</LinearLayout>

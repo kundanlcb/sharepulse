@@ -1,0 +1,190 @@
+[
+  {
+    "id": 1,
+    "userName": "Alice",
+    "time": "2023-01-15T10:30:00",
+    "isPoll": true,
+    "pollQuestion": "Which stock will perform the best in the next quarter?",
+    "pollOptions": ["AAPL", "GOOGL", "AMZN"],
+    "alreadyVoted": false,
+    "pollData": [
+      {"option": "AAPL", "percent": 25},
+      {"option": "GOOGL", "percent": 30},
+      {"option": "AMZN", "percent": 45}
+    ],
+    "likes": 20,
+    "repostCount": 10,
+    "shareCount": 5,
+    "isReposted": false,
+    "likedByUser": false,
+    "repostedByUser": false
+  },
+  {
+    "id": 2,
+    "userName": "Bob",
+    "time": "2023-01-15T11:45:00",
+    "isPoll": false,
+    "contentText": "Just analyzed the latest market trends. Looks like tech stocks are gaining momentum. Keep an eye on your investments!",
+    "mediaList": [
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1018/1000/600"},
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1022/1000/600"},
+      {"mediaType": "video", "mediaUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
+    ],
+    "likes": 15,
+    "repostCount": 5,
+    "shareCount": 2,
+    "isReposted": true,
+    "likedByUser": true,
+    "repostedByUser": false
+  },
+  {
+    "id": 3,
+    "userName": "Charlie",
+    "time": "2023-01-15T13:20:00",
+    "isPoll": true,
+    "pollQuestion": "Which sector do you think will outperform in the current economic climate?",
+    "pollOptions": ["Technology", "Healthcare", "Energy"],
+    "alreadyVoted": false,
+    "pollData": [
+      {"option": "Technology", "percent": 40},
+      {"option": "Healthcare", "percent": 20},
+      {"option": "Energy", "percent": 30}
+    ],
+    "likes": 30,
+    "repostCount": 15,
+    "shareCount": 8,
+    "isReposted": false,
+    "likedByUser": false,
+    "repostedByUser": true
+  },
+  {
+    "id": 4,
+    "userName": "David",
+    "time": "2023-12-15T14:55:00",
+    "isPoll": false,
+    "contentText": "Just closed a successful trade on XYZ Corp. The market volatility is providing great opportunities for day traders. #StockMarket #Trading",
+    "mediaList": [
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1015/1000/600"},
+      {"mediaType": "video", "mediaUrl": "https://www.youtube.com/watch?v=3tmd-ClpJxA"}
+    ],
+    "likes": 10,
+    "repostCount": 3,
+    "shareCount": 1,
+    "isReposted": false,
+    "likedByUser": false,
+    "repostedByUser": false
+  },
+  {
+    "id": 5,
+    "userName": "Eva",
+    "time": "2023-12-19T16:10:00",
+    "isPoll": true,
+    "pollQuestion": "What's your favorite stock analysis tool?",
+    "pollOptions": ["TradingView", "Yahoo Finance", "Bloomberg Terminal"],
+    "alreadyVoted": false,
+    "pollData": [
+      {"option": "TradingView", "percent": 15},
+      {"option": "Yahoo Finance", "percent": 40},
+      {"option": "Bloomberg Terminal", "percent": 45}
+    ],
+    "likes": 25,
+    "repostCount": 8,
+    "shareCount": 4,
+    "isReposted": true,
+    "likedByUser": true,
+    "repostedByUser": true
+  },
+  {
+    "id": 6,
+    "userName": "Frank",
+    "time": "2023-12-20T18:30:00",
+    "isPoll": false,
+    "contentText": "Attended an insightful webinar on trading strategies. Learning never stops in the world of stocks! #StockMarketEducation",
+    "mediaList": [
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1019/1000/600"},
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1020/1000/600"},
+      {"mediaType": "video", "mediaUrl": "https://www.youtube.com/watch?v=8UZ5BMZy5P4"}
+    ],
+    "likes": 18,
+    "repostCount": 7,
+    "shareCount": 3,
+    "isReposted": false,
+    "likedByUser": true,
+    "repostedByUser": false
+  },
+  {
+    "id": 7,
+    "userName": "Grace",
+    "time": "2023-01-15T20:45:00",
+    "isPoll": true,
+    "pollQuestion": "What's your preferred trading style?",
+    "pollOptions": ["Day Trading", "Swing Trading", "Long-Term Investing"],
+    "alreadyVoted": false,
+    "pollData": [
+      {"option": "Day Trading", "percent": 30},
+      {"option": "Swing Trading", "percent": 25},
+      {"option": "Long-Term Investing", "percent": 45}
+    ],
+    "likes": 35,
+    "repostCount": 12,
+    "shareCount": 6,
+    "isReposted": true,
+    "likedByUser": false,
+    "repostedByUser": true
+  },
+  {
+    "id": 8,
+    "userName": "Henry",
+    "time": "2023-01-15T22:15:00",
+    "isPoll": false,
+    "contentText": "Diversification is the key to a resilient portfolio. How many different stocks do you have in your portfolio?",
+    "mediaList": [
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1021/1000/600"},
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1022/1000/600"},
+      {"mediaType": "video", "mediaUrl": "https://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4"}
+    ],
+    "likes": 22,
+    "repostCount": 9,
+    "shareCount": 5,
+    "isReposted": false,
+    "likedByUser": true,
+    "repostedByUser": true
+  },
+  {
+    "id": 9,
+    "userName": "Ivy",
+    "time": "2023-01-16T08:05:00",
+    "isPoll": true,
+    "pollQuestion": "In which market segment do you see the most potential for growth?",
+    "pollOptions": ["Tech Stocks", "Renewable Energy", "Cryptocurrencies"],
+    "alreadyVoted": false,
+    "pollData": [
+      {"option": "Tech Stocks", "percent": 25},
+      {"option": "Renewable Energy", "percent": 35},
+      {"option": "Cryptocurrencies", "percent": 40}
+    ],
+    "likes": 28,
+    "repostCount": 14,
+    "shareCount": 7,
+    "isReposted": true,
+    "likedByUser": true,
+    "repostedByUser": false
+  },
+  {
+    "id": 10,
+    "userName": "Jack",
+    "time": "2023-01-16T09:40:00",
+    "isPoll": false,
+    "contentText": "Morning market analysis: Global markets are responding positively to economic indicators. Stay informed for strategic trading decisions.",
+    "mediaList": [
+      {"mediaType": "photo", "mediaUrl": "https://picsum.photos/id/1023/1000/600"},
+      {"mediaType": "video", "mediaUrl": "https://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4"}
+    ],
+    "likes": 40,
+    "repostCount": 18,
+    "shareCount": 9,
+    "isReposted": true,
+    "likedByUser": false,
+    "repostedByUser": false
+  }
+]

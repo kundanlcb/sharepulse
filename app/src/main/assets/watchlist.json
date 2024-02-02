@@ -1,0 +1,42 @@
+[
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "currentPrice": 500.00,
+    "todayChange": 10.00,
+    "changePercent": 2.0,
+    "changeInPrice": 5.00
+  },
+  {
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc.",
+    "currentPrice": 2500.00,
+    "todayChange": -15.50,
+    "changePercent": -1.5,
+    "changeInPrice": -7.50
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc.",
+    "currentPrice": 3500.00,
+    "todayChange": 25.75,
+    "changePercent": 1.5,
+    "changeInPrice": 12.75
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft Corporation",
+    "currentPrice": 300.00,
+    "todayChange": 8.25,
+    "changePercent": 2.75,
+    "changeInPrice": 3.75
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla Inc.",
+    "currentPrice": 750.00,
+    "todayChange": -20.00,
+    "changePercent": -2.5,
+    "changeInPrice": -10.00
+  }
+]

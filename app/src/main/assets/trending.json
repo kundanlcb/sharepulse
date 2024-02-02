@@ -1,0 +1,62 @@
+[
+  {
+    "name": "S&P 500",
+    "symbol": "SPX",
+    "current_price": 4500.25,
+    "today_percent_change": 0.75
+  },
+  {
+    "name": "Dow Jones",
+    "symbol": "DJI",
+    "current_price": 35250.50,
+    "today_percent_change": -0.25
+  },
+  {
+    "name": "NASDAQ",
+    "symbol": "IXIC",
+    "current_price": 15000.75,
+    "today_percent_change": 1.5
+  },
+  {
+    "name": "FTSE 100",
+    "symbol": "FTSE",
+    "current_price": 7200.00,
+    "today_percent_change": -0.5
+  },
+  {
+    "name": "DAX",
+    "symbol": "DAX",
+    "current_price": 15500.50,
+    "today_percent_change": 0.9
+  },
+  {
+    "name": "Nikkei 225",
+    "symbol": "NI225",
+    "current_price": 28000.75,
+    "today_percent_change": -0.1
+  },
+  {
+    "name": "Hang Seng",
+    "symbol": "HSI",
+    "current_price": 25000.25,
+    "today_percent_change": 0.25
+  },
+  {
+    "name": "CAC 40",
+    "symbol": "CAC",
+    "current_price": 6500.50,
+    "today_percent_change": -0.75
+  },
+  {
+    "name": "Sensex",
+    "symbol": "BSE",
+    "current_price": 58000.75,
+    "today_percent_change": 0.8
+  },
+  {
+    "name": "ASX 200",
+    "symbol": "ASX",
+    "current_price": 7300.25,
+    "today_percent_change": -0.3
+  }
+]

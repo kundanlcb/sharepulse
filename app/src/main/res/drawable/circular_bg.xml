@@ -1,0 +1,8 @@
+<!-- res/drawable/circular_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="100dp" /> <!-- Use a large value for a circle -->
+    <solid android:color="@color/primary_dark" />
+
+</shape>

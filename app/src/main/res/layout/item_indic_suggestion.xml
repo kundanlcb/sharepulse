@@ -1,0 +1,47 @@
+<!-- res/layout/item_indices_suggestion.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:layout_marginTop="4dp"
+    android:background="@color/white"
+    android:paddingEnd="16dp">
+
+    <!-- ImageView for indices image -->
+    <ImageView
+        android:id="@+id/imageViewIndices"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_indices"
+        android:contentDescription="@string/indices_image_description"/>
+
+    <!-- Vertical LinearLayout for name and symbol -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <TextView
+            android:id="@+id/textViewIndicesName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:text="Indices Name"/>
+
+        <TextView
+            android:id="@+id/textViewIndicesSymbol"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:text="SYM"/>
+    </LinearLayout>
+</LinearLayout>

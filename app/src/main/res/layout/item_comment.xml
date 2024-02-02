@@ -1,0 +1,59 @@
+<!-- item_comment.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- User profile picture -->
+    <ImageView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/imageViewProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_account_circle"
+        android:background="@drawable/circle_white_background"
+        android:contentDescription="User Profile Picture"/>
+
+    <!-- User name, timestamp, and comment content container -->
+    <LinearLayout
+        android:padding="8dp"
+        android:background="@drawable/round_corner_background"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <!-- User name and timestamp in the same row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hours ago"
+                android:textColor="@android:color/darker_gray"/>
+        </LinearLayout>
+
+        <!-- Comment content -->
+        <TextView
+            android:id="@+id/textViewComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="This is a sample comment."
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+</LinearLayout>

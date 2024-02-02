@@ -1,0 +1,232 @@
+<!-- res/layout/activity_post_feed.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.feed.CreateFeed">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme" />
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <!-- Your content views go here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_create_feed_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editTextFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:autofillHints=""
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/hint_write_your_feed"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="1000"
+                    android:minHeight="100dp"
+                    android:scrollHorizontally="false" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/ll_create_feed_poll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:autofillHints=""
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="@string/write_your_questiuon"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="1000"
+                    android:scrollHorizontally="false" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_horizontal_margin">
+
+                    <EditText
+                        android:id="@+id/option1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginBottom="8dp"
+                        android:autofillHints="text"
+                        android:background="@drawable/poll_option_input"
+                        android:hint="@string/option_1"
+                        android:inputType="text"
+                        android:padding="8dp" />
+
+                    <EditText
+                        android:id="@+id/option2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/option1"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="text"
+                        android:background="@drawable/poll_option_input"
+                        android:hint="@string/option_2"
+                        android:inputType="text"
+                        android:padding="8dp" />
+
+                    <EditText
+                        android:id="@+id/option3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/option2"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="text"
+                        android:background="@drawable/poll_option_input"
+                        android:hint="@string/option_3"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:visibility="gone" />
+
+
+                    <!-- Close Button (Top-right) -->
+                    <ImageButton
+                        android:id="@+id/closePollUi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/circular_bg"
+                        android:contentDescription="@string/close_poll"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_close_white" />
+
+                    <!-- Plus Button (Bottom-right) -->
+                    <ImageButton
+                        android:id="@+id/plusButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/circular_bg"
+                        android:contentDescription="@string/add_option"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_add_white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!-- Post content -->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Image/Video options at the top of the keyboard -->
+            <!-- Use ImageButtons for choosing images and videos -->
+            <!-- You may customize this based on your design -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/attachmentOptions"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:paddingEnd="@dimen/activity_horizontal_margin">
+
+                    <ImageButton
+                        android:id="@+id/buttonPoll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/create_poll"
+                        android:src="@drawable/ic_poll_24" />
+
+                    <ImageButton
+                        android:id="@+id/buttonAttachImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/attach_image"
+                        android:src="@drawable/ic_add_a_photo_24" />
+
+                    <TextView
+                        android:id="@+id/buttonSelectIndices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:background="@drawable/circular_corner_white_with_border"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/select_indices"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="3"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/buttonPublish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/circular_corner_primary"
+                        android:gravity="center"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="@string/publish"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Button to open the indices selection activity -->
+
+
+            <!-- Additional UI elements as needed -->
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
