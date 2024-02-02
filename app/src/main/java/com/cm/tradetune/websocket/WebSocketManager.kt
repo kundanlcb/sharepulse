@@ -1,4 +1,4 @@
-package com.cm.tradetune.data.websocket
+package com.cm.tradetune.websocket
 
 // WebSocketManager.kt
 import com.cm.tradetune.data.model.HelloMessage

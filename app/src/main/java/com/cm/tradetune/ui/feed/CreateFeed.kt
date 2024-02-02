@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.cm.tradetune.TradeMateApplication
 import com.cm.tradetune.data.model.FeedDto
 import com.cm.tradetune.data.model.HelloMessage
-import com.cm.tradetune.data.websocket.WebSocketManager
+import com.cm.tradetune.websocket.WebSocketManager
 import com.cm.tradetune.databinding.ActivityCreateFeedBinding
 import com.cm.tradetune.di.DaggerAppComponent
 import com.cm.tradetune.util.Utils.generateUniqueId

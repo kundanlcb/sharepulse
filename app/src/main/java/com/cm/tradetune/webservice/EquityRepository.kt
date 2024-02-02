@@ -1,4 +1,4 @@
-package com.cm.tradetune.data.webservice
+package com.cm.tradetune.webservice
 
 import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.data.model.UserDto

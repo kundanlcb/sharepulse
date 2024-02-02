@@ -1,4 +1,4 @@
-package com.cm.tradetune.data.webservice
+package com.cm.tradetune.webservice
 
 data class FailureResponse(
     val message: String?,

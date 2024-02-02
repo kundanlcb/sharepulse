@@ -7,9 +7,9 @@ import androidx.lifecycle.MutableLiveData
 import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.data.model.FeedDto
 import com.cm.tradetune.data.model.UserDto
-import com.cm.tradetune.data.webservice.EquityRepository
-import com.cm.tradetune.data.webservice.FailureResponse
-import com.cm.tradetune.data.webservice.UserRepository
+import com.cm.tradetune.webservice.EquityRepository
+import com.cm.tradetune.webservice.FailureResponse
+import com.cm.tradetune.webservice.UserRepository
 import com.cm.tradetune.util.JsonUtil
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -18,7 +18,8 @@ import javax.inject.Inject
 
 class CreateFeedViewModel @Inject constructor(
     application: Application, private val userRepository: UserRepository,
-    private val equityRepository: EquityRepository) : AndroidViewModel(application) {
+    private val equityRepository: EquityRepository
+) : AndroidViewModel(application) {
     // MutableLiveData to hold the list of feeds
     private val _feedList = MutableLiveData<List<FeedDto>>()
     val feedList: LiveData<List<FeedDto>> get() = _feedList
@@ -75,18 +76,17 @@ class CreateFeedViewModel @Inject constructor(
         userRepository.getUserData(userId, onSuccess, onFailure)
     }
 
-     fun fetchEquities() {
-         println("Inside: fetchEquities")
+    fun fetchEquities() {
+        println("Inside: fetchEquities")
         val onSuccess: (List<EquityDto>?) -> Unit = { data ->
-            if (data != null) {
-                println(data.first().name)
-            }
+
+            data?.forEach { item -> println(item.name) }
         }
 
         val onFailure: (FailureResponse) -> Unit = { failureResponse ->
             println(failureResponse.message)
         }
 
-        equityRepository.getEquities(onSuccess,onFailure)
+        equityRepository.getEquities(onSuccess, onFailure)
     }
 }

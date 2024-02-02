@@ -1,4 +1,4 @@
-package com.cm.tradetune.data.webservice
+package com.cm.tradetune.webservice
 
 data class CommonResponse<T>(
     val success: Boolean,

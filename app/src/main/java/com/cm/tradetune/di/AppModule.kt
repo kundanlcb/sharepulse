@@ -1,10 +1,10 @@
 package com.cm.tradetune.di
 
 import android.app.Application
-import com.cm.tradetune.data.webservice.ApiService
-import com.cm.tradetune.data.webservice.EquityRepository
-import com.cm.tradetune.data.webservice.UserRepository
-import com.cm.tradetune.data.webservice.WebService
+import com.cm.tradetune.webservice.ApiService
+import com.cm.tradetune.webservice.EquityRepository
+import com.cm.tradetune.webservice.UserRepository
+import com.cm.tradetune.webservice.WebService
 import com.cm.tradetune.ui.feed.CreateFeedViewModel
 import dagger.Component
 import dagger.Module

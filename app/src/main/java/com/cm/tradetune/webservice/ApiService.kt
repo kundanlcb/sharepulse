@@ -1,4 +1,4 @@
-package com.cm.tradetune.data.webservice
+package com.cm.tradetune.webservice
 
 import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.data.model.UserDto
@@ -10,9 +10,9 @@ interface ApiService {
 
     // Define your API endpoints using Retrofit annotations
     @GET("endpoint")
-    fun fetchData(): Single<Response<CommonResponse<UserDto>>>
+    fun fetchData(): Single<Response<UserDto>>
     @GET("/equity")
-    fun fetchSecurities(): Single<Response<CommonResponse<List<EquityDto>>>>
+    fun fetchSecurities(): Single<Response<List<EquityDto>>>
 
 }
 

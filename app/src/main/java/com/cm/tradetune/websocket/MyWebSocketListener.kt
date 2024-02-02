@@ -1,4 +1,4 @@
-package com.cm.tradetune.data.websocket// WebSocketListener.kt
+package com.cm.tradetune.websocket// WebSocketListener.kt
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener

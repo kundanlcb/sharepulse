@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ShareMate"
+rootProject.name = "SharePulse"
 include(":app")

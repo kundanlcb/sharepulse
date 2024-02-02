@@ -1,4 +1,4 @@
-package com.cm.tradetune.data.webservice
+package com.cm.tradetune.webservice
 
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -8,7 +8,7 @@ import retrofit2.Response
 class WebService {
 
     fun <T> handleRequest(
-        single: Single<Response<CommonResponse<T>>>,
+        single: Single<Response<T>>,
         onSuccess: (T?) -> Unit,
         onFailure: (FailureResponse) -> Unit
     ) {
@@ -17,17 +17,12 @@ class WebService {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ response ->
                 if (response.isSuccessful) {
-                    val body = response.body()
-                    if (body != null && body.success) {
-                        onSuccess.invoke(body.data)
-                    } else {
-                        onFailure.invoke(FailureResponse(body?.message ?: "Unknown error", null))
-                    }
+                    onSuccess.invoke(response.body())
                 } else {
-                    onFailure.invoke(FailureResponse("Network error", null))
+                    onFailure.invoke(FailureResponse(response.errorBody().toString(), null))
                 }
             }, { throwable ->
-                onFailure.invoke(FailureResponse("Unexpected error", throwable))
+                onFailure.invoke(FailureResponse(throwable.localizedMessage, throwable))
             })
     }
 }
