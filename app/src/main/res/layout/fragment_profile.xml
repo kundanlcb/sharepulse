@@ -5,6 +5,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
+        android:background="@color/primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -31,6 +32,7 @@
                     android:src="@drawable/dp_placeholder" />
 
                 <TextView
+                    android:textColor="@color/white"
                     android:id="@+id/textViewName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -40,6 +42,7 @@
                     android:textSize="18sp" />
 
                 <TextView
+                    android:textColor="@color/white"
                     android:id="@+id/textViewUsername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -50,18 +53,20 @@
 
                 <!-- Edit profile button -->
                 <androidx.appcompat.widget.AppCompatButton
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
                     android:id="@+id/btnEditProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/circular_corner_primary"
+                    android:background="@drawable/circular_bg"
                     android:paddingStart="@dimen/activity_horizontal_margin"
                     android:paddingEnd="@dimen/activity_horizontal_margin"
                     android:text="@string/edit_profile"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
+                <include layout="@layout/profile_card"/>
             </LinearLayout>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
