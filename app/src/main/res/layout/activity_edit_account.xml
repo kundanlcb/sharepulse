@@ -73,14 +73,20 @@
           app:layout_constraintTop_toBottomOf="@id/editTextName" />
 
       <!-- Button to save changes -->
-      <Button
-          android:id="@+id/btnSaveChanges"
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:textColor="@color/white"
+          android:background="@drawable/circular_corner_primary"
+          android:id="@+id/buttonPostComment"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_height="36dp"
           android:layout_marginTop="16dp"
-          android:text="Save Changes"
+          android:paddingStart="@dimen/activity_horizontal_margin"
+          android:paddingEnd="@dimen/activity_horizontal_margin"
           app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/editTextUsername" />
+          app:layout_constraintTop_toBottomOf="@id/editTextUsername"
+          android:text="Save Changes" />
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>
    </androidx.constraintlayout.widget.ConstraintLayout>

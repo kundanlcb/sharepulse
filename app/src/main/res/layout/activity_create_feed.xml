@@ -185,7 +185,7 @@
                     <TextView
                         android:id="@+id/buttonSelectIndices"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="36dp"
                         android:background="@drawable/circular_corner_white_with_border"
                         android:gravity="center"
                         android:maxLines="1"
@@ -204,18 +204,16 @@
                     android:gravity="end|center_vertical"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:paddingStart="@dimen/activity_horizontal_margin"
+                        android:paddingEnd="@dimen/activity_horizontal_margin"
+                        android:textColor="@color/white"
+                        android:background="@drawable/circular_corner_primary"
                         android:id="@+id/buttonPublish"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="36dp"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                        android:background="@drawable/circular_corner_primary"
-                        android:gravity="center"
-                        android:paddingLeft="16dp"
-                        android:paddingRight="16dp"
-                        android:text="@string/publish"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:text="Publish" />
 
 
                 </LinearLayout>
