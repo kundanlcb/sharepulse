@@ -22,7 +22,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:iconifiedByDefault="false"
-            app:queryHint="Search Indices" />
+            app:queryHint="Search Indices"
+            app:searchIcon="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Your RecyclerView or other UI elements below the Toolbar -->
@@ -42,6 +46,5 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         />
+        android:layout_height="match_parent" />
 </LinearLayout>

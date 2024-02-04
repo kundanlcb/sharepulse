@@ -73,4 +73,6 @@
     <string name="close_poll">close poll</string>
     <string name="add_option">add option</string>
     <string name="write_your_questiuon">Write your questiuon..</string>
+    <string name="follow_profile">Follow</string>
+    <string name="subscribe_profile">Subscribe</string>
 </resources>

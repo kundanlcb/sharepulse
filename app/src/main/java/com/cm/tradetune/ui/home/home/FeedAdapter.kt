@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -15,6 +16,7 @@ import com.cm.tradetune.R
 import com.cm.tradetune.data.model.FeedDto
 import com.cm.tradetune.ui.feed.FeedDetails
 import com.cm.tradetune.ui.feed.PollDetails
+import com.cm.tradetune.ui.profile.Profile
 import com.cm.tradetune.util.TimeUtil.Companion.toMillis
 import com.cm.tradetune.util.toTimeAgo
 
@@ -32,6 +34,7 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
 
 
     inner class PollViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val userDpImageView: ImageView=itemView.findViewById(R.id.userDpImageView)
         val likeBtn: ImageButton = itemView.findViewById(R.id.likeButton)
         val repostButton: ImageButton = itemView.findViewById(R.id.repostButton)
         val pollQuestionTextView: TextView = itemView.findViewById(R.id.pollQuestionTextView)
@@ -60,6 +63,7 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
     }
 
     inner class ContentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val userDpImageView: ImageView=itemView.findViewById(R.id.userDpImageView)
         val likeBtn: ImageButton = itemView.findViewById(R.id.likeButton)
         val repostButton: ImageButton = itemView.findViewById(R.id.repostButton)
         val contentTextView: TextView = itemView.findViewById(R.id.contentTextView)
@@ -145,6 +149,12 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
                     currentFeed.repostCount += if (currentFeed.isReposted) 1 else -1
                     notifyItemChanged(position)
                 }
+                holder.userDpImageView.setOnClickListener{
+                    val context = holder.itemView.context
+                    val intent: Intent=  Intent(context, Profile::class.java)
+                    intent.putExtra("profile_content", currentFeed.userName) // pass data to FeedDetailActivity
+                    context.startActivity(intent)
+                }
                 holder.updateRepostButton(currentFeed.isReposted)
                 holder.updateLikeButton(currentFeed.likedByUser)
                 holder.usernameTextView.text = currentFeed.userName
@@ -170,7 +180,12 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
                     currentFeed.repostCount += if (currentFeed.isReposted) 1 else -1
                     notifyItemChanged(position)
                 }
-
+                holder.userDpImageView.setOnClickListener{
+                    val context = holder.itemView.context
+                    val intent: Intent=  Intent(context, Profile::class.java)
+                    intent.putExtra("profile_content", currentFeed.userName) // pass data to FeedDetailActivity
+                    context.startActivity(intent)
+                }
                 holder.updateRepostButton(currentFeed.isReposted)
                 holder.updateLikeButton(currentFeed.likedByUser)
                 holder.contentTextView.text = currentFeed.contentText

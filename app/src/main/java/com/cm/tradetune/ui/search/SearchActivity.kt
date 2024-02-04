@@ -26,6 +26,7 @@ class SearchActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tabLayout, viewPager) { tab, position ->
             tab.text = resultTitles[position]
         }.attach()
+        binding.searchView.requestFocus()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
