@@ -1,13 +1,12 @@
 package com.cm.tradetune.ui.profile
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cm.tradetune.R
 import com.cm.tradetune.data.model.FeedDto
-import com.cm.tradetune.databinding.ActivityEditAccountBinding
 import com.cm.tradetune.databinding.ActivityProfileBinding
 import com.cm.tradetune.ui.home.home.FeedAdapter
 import com.cm.tradetune.ui.home.profile.ProfileViewModel

@@ -3,5 +3,7 @@
     <style name="Base.Theme.TradeTune" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+
     </style>
 </resources>

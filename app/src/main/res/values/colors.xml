@@ -2,8 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#11a44c</color>
-    <color name="primary_dark">#11a44c</color>
+    <color name="primary">@android:color/holo_purple</color>
+    <color name="toolbar">@android:color/transparent</color>
+    <color name="primary_dark">@android:color/holo_purple</color>
     <color name="grey">#797575</color>
     <color name="red">#CD1574</color>
     <color name="green">#0C6A32</color>

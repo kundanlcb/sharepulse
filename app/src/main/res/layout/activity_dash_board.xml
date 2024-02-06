@@ -12,9 +12,8 @@
         android:id="@+id/toolbar_dashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:background="@color/toolbar"
         tools:layout_editor_absoluteX="1dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

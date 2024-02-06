@@ -8,85 +8,85 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        android:background="@color/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="4dp"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <!-- Image view for displaying the current profile picture -->
-  <androidx.constraintlayout.widget.ConstraintLayout
-      android:padding="@dimen/activity_horizontal_margin"
-      android:layout_marginTop="?attr/actionBarSize"
-     app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintBottom_toBottomOf="parent"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-      <ImageView
-          android:id="@+id/imageViewProfile"
-          android:layout_width="100dp"
-          android:layout_height="100dp"
-          android:layout_marginTop="@dimen/activity_horizontal_margin"
-          android:layout_marginBottom="16dp"
-          android:scaleType="centerCrop"
-          android:src="@drawable/dp_placeholder"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dp_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-      <!-- Button to choose or capture a new profile picture -->
-      <ImageButton
-          android:id="@+id/btnChangeProfilePicture"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="16dp"
-          android:background="?android:attr/selectableItemBackground"
-          android:contentDescription="Change Profile Picture"
-          android:src="@drawable/ic_add_a_photo_24"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/imageViewProfile" />
+        <!-- Button to choose or capture a new profile picture -->
+        <ImageButton
+            android:id="@+id/btnChangeProfilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Change Profile Picture"
+            android:src="@drawable/ic_add_a_photo_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewProfile" />
 
-      <!-- Edit text fields for updating profile information -->
-      <EditText
-          android:id="@+id/editTextName"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="16dp"
-          android:hint="Name"
-          android:inputType="text"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/btnChangeProfilePicture" />
+        <!-- Edit text fields for updating profile information -->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Name"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnChangeProfilePicture" />
 
-      <EditText
-          android:id="@+id/editTextUsername"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="8dp"
-          android:hint="Username"
-          android:inputType="text"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/editTextName" />
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Username"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextName" />
 
-      <!-- Button to save changes -->
+        <!-- Button to save changes -->
 
-      <androidx.appcompat.widget.AppCompatButton
-          android:textColor="@color/white"
-          android:background="@drawable/circular_corner_primary"
-          android:id="@+id/buttonPostComment"
-          android:layout_width="wrap_content"
-          android:layout_height="36dp"
-          android:layout_marginTop="16dp"
-          android:paddingStart="@dimen/activity_horizontal_margin"
-          android:paddingEnd="@dimen/activity_horizontal_margin"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/editTextUsername"
-          android:text="Save Changes" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="@color/white"
+            android:background="@drawable/circular_corner_primary"
+            android:id="@+id/buttonPostComment"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextUsername"
+            android:text="Save Changes" />
 
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
-   </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
