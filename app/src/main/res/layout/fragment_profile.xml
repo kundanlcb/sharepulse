@@ -29,7 +29,8 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/dp_placeholder" />
+                    android:src="@drawable/dp_placeholder"
+                    android:contentDescription="@string/edit_profile" />
 
                 <TextView
 
@@ -38,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
-                    android:text="John Doe"
+                    android:text="@string/dummy_name"
                     android:textSize="18sp" />
 
                 <TextView
@@ -52,22 +53,45 @@
                     android:textSize="14sp" />
 
                 <!-- Edit profile button -->
-                <TextView
-                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal"
                     android:id="@+id/btnEditProfile"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/circular_bg"
-                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal"
                     android:paddingEnd="@dimen/activity_horizontal_margin"
-                    android:text="@string/edit_profile"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="12sp" />
-                <include layout="@layout/profile_card"/>
+                    android:paddingStart="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:id="@+id/button_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_profile"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+                    <View
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/button_image"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_edit"
+                        android:contentDescription="@string/edit_profile" />
+
+                </LinearLayout>
+
+
+
+                <include layout="@layout/profile_card" />
             </LinearLayout>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>

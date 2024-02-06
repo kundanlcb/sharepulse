@@ -66,43 +66,80 @@
 
                     <!-- Edit profile button -->
                     <LinearLayout
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <LinearLayout
+                            android:layout_gravity="center_horizontal"
                             android:id="@+id/btnFollowProfile"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:gravity="center_vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="36dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
                             android:background="@drawable/circular_bg"
-                            android:gravity="center"
-                            android:paddingStart="@dimen/activity_horizontal_margin"
+                            android:orientation="horizontal"
                             android:paddingEnd="@dimen/activity_horizontal_margin"
-                            android:text="@string/follow_profile"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="12sp" />
+                            android:paddingStart="@dimen/activity_horizontal_margin">
 
-                        <TextView
+                            <TextView
+                                android:id="@+id/button_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/follow_profile"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp" />
+                            <View
+                                android:layout_margin="8dp"
+                                android:background="@color/white"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_add_white"
+                                android:contentDescription="@string/edit_profile" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_gravity="center_horizontal"
                             android:id="@+id/btnSubscribeProfile"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:gravity="center_vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="36dp"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
                             android:background="@drawable/circular_bg"
-                            android:gravity="center"
-                            android:paddingStart="@dimen/activity_horizontal_margin"
+                            android:orientation="horizontal"
                             android:paddingEnd="@dimen/activity_horizontal_margin"
-                            android:text="@string/subscribe_profile"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="12sp" />
+                            android:paddingStart="@dimen/activity_horizontal_margin">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/subscribe_profile"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp" />
+                            <View
+                                android:layout_margin="8dp"
+                                android:background="@color/white"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:id="@+id/button_image"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_notification_add_white"
+                                android:contentDescription="@string/edit_profile" />
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <include layout="@layout/profile_card" />
