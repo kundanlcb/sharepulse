@@ -9,21 +9,19 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:background="@color/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"
         android:elevation="4dp">
+
         <ImageView
             android:id="@+id/securityIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:contentDescription="@string/security_logo"
-            android:src="@drawable/ic_security_logo"
-            />
+            android:src="@drawable/ic_security_logo" />
     </androidx.appcompat.widget.Toolbar>
-
-
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -40,10 +38,11 @@
                 android:layout_height="wrap_content"
                 android:fitsSystemWindows="true"
                 app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
                     <!-- Header Section -->
                     <include layout="@layout/security_header" />
 
@@ -52,8 +51,6 @@
                     <!-- Fundamentals Section -->
                     <include layout="@layout/security_fundamentals" />
                 </LinearLayout>
-
-
 
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -65,8 +62,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
