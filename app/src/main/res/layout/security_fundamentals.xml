@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fundamentalsSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/chartContainer">
+
+    <!-- First Row for Fundamentals -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- First Fundamental Metric -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textMarketCapKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Market Cap:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textMarketCapValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$[Market Cap]" />
+
+        </LinearLayout>
+
+        <!-- Second Fundamental Metric -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textPERatioKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P/E:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textPERatioValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[P/E Ratio]" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Second Row for Fundamentals -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- Third Fundamental Metric -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textPBRatioKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P/B Ratio:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textPBRatioValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[P/B Ratio]" />
+
+        </LinearLayout>
+
+        <!-- Fourth Fundamental Metric -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textBookValueKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Value:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textBookValueValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$[Book Value]" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Third Row for Fundamentals -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- Fifth Fundamental Metric -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textFaceValueKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Face Value:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textFaceValueValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$[Face Value]" />
+
+        </LinearLayout>
+
+        <!-- Sixth Fundamental Metric -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textIndustryPEKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Face Value:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textIndustryPEValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$[Face Value]" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
