@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cm.tradetune.data.model.TrendingDto
+import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.databinding.FragmentSearchBinding
 import com.cm.tradetune.ui.search.SearchActivity
 import com.cm.tradetune.ui.search.SearchViewModel
@@ -45,7 +45,7 @@ class SearchFragment : Fragment() {
     }
     private fun setUpTrendList() {
         // Initialize RecyclerView and its adapter
-        val emptyFeedList: List<TrendingDto> = emptyList()
+        val emptyFeedList: List<EquityDto> = emptyList()
         trendAdapter = TrendingIndicesAdapter(emptyFeedList)
         // Set layout manager for the RecyclerView
         binding.recyclerTrend.layoutManager = LinearLayoutManager(requireContext())

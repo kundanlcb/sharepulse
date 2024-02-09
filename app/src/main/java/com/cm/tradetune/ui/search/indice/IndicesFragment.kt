@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.cm.tradetune.data.model.TrendingDto
+import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.databinding.FragmentIndicesBinding
 
 /**
@@ -38,7 +38,7 @@ class IndicesFragment : Fragment() {
 
     private fun setUpIndicesList() {
         // Initialize RecyclerView and its adapter
-        val emptyUserList: List<TrendingDto> = emptyList()
+        val emptyUserList: List<EquityDto> = emptyList()
         indicesAdapter = IndicesAdapter(emptyUserList)
         // Set layout manager for the RecyclerView
         binding.rvIndices.layoutManager = LinearLayoutManager(requireContext())

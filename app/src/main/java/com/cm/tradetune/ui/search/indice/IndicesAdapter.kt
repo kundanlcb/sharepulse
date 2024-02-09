@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.cm.tradetune.R
-import com.cm.tradetune.data.model.TrendingDto
+import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.databinding.ItemTrendingBinding
 
-class IndicesAdapter (private var trendingIndices: List<TrendingDto>) :
+class IndicesAdapter (private var trendingIndices: List<EquityDto>) :
     RecyclerView.Adapter<IndicesAdapter.ViewHolder>() {
 
-    fun submitList(newTrendList: List<TrendingDto>?) {
+    fun submitList(newTrendList: List<EquityDto>?) {
         if (newTrendList != null) {
             trendingIndices = newTrendList
         }
@@ -20,7 +20,7 @@ class IndicesAdapter (private var trendingIndices: List<TrendingDto>) :
     class ViewHolder(private val binding: ItemTrendingBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val context: Context =itemView.context
-        fun bind(trending: TrendingDto) {
+        fun bind(trending: EquityDto) {
             binding.textViewIndexName.text = trending.name
             binding.textViewIndexPrice.text= trending.currentPrice.toString()
             binding.textViewIndexChange.text = "${trending.todayPercentChange}%"

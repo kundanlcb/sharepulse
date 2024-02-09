@@ -42,6 +42,7 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
         val timeTextView: TextView = itemView.findViewById(R.id.timeTextView)
         val tvLikeCount: TextView = itemView.findViewById(R.id.tvLikeCount)
         val tvRepostCount: TextView = itemView.findViewById(R.id.tvRepostCount)
+        val tvPostSecurity: TextView= itemView.findViewById(R.id.textFeedSecurity)
 
         private var recyclerPollOptions: RecyclerView =
             itemView.findViewById(R.id.optionsRecyclerView)
@@ -71,6 +72,7 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
         val timeTextView: TextView = itemView.findViewById(R.id.timeTextView)
         val tvLikeCount: TextView = itemView.findViewById(R.id.tvLikeCount)
         val tvRepostCount: TextView = itemView.findViewById(R.id.tvRepostCount)
+        val tvPostSecurity: TextView= itemView.findViewById(R.id.textFeedSecurity)
         private val mediaPager: ViewPager2 = itemView.findViewById(R.id.mediaPager)
        // private val dotsIndicator: DotsIndicator = itemView.findViewById(R.id.dots_indicator)
         /* private var recyclerMedia: RecyclerView =
@@ -135,6 +137,7 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
 
 
         when (holder) {
+
             is PollViewHolder -> {
                 holder.likeBtn.setOnClickListener {
                     currentFeed.likedByUser = !currentFeed.likedByUser

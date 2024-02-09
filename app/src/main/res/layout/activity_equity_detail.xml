@@ -14,13 +14,7 @@
         android:background="@color/toolbar"
         android:elevation="4dp">
 
-        <ImageView
-            android:id="@+id/securityIcon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:contentDescription="@string/security_logo"
-            android:src="@drawable/ic_security_logo" />
+
     </androidx.appcompat.widget.Toolbar>
 
 
@@ -43,13 +37,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <!-- Header Section -->
-                    <include layout="@layout/security_header" />
+                    <include
+                        android:id="@+id/layout_security_header"
+                        layout="@layout/security_header" />
 
                     <!-- Chart Section Container -->
-                    <include layout="@layout/security_chart" />
+                    <include
+                        android:id="@+id/layout_security_chart"
+                        layout="@layout/security_chart" />
                     <!-- Fundamentals Section -->
-                    <include layout="@layout/security_fundamentals" />
+                    <include
+                        android:id="@+id/layout_security_fundamentals"
+                        layout="@layout/security_fundamentals" />
                 </LinearLayout>
 
 

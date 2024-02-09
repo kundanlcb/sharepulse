@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.cm.tradetune.data.model.TrendingDto
 import com.cm.tradetune.data.model.UserDto
 import com.cm.tradetune.util.JsonUtil
 import com.google.gson.Gson

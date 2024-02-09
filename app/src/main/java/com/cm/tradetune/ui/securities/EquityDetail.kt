@@ -24,7 +24,7 @@ class EquityDetail : AppCompatActivity() {
         val toolbar = binding.toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.apply {
-            title = "Profile"
+            title = "[Infosys] (INFY)"
             setDisplayHomeAsUpEnabled(true)
             setHomeAsUpIndicator(R.drawable.ic_back) // Replace with your back arrow icon
         }
@@ -41,10 +41,20 @@ class EquityDetail : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    private fun setUpFundamentals() {
+        val layoutSecurityFundamentals = binding.layoutSecurityFundamentals
+        layoutSecurityFundamentals.textBookValueValue.text = "30.15"
+        layoutSecurityFundamentals.textFaceValueValue.text = "10.50"
+        layoutSecurityFundamentals.textIndustryPEValue.text = "20.15"
+        layoutSecurityFundamentals.textMarketCapValue.text = "2.15B"
+        layoutSecurityFundamentals.textPBRatioValue.text = "2.15"
+        layoutSecurityFundamentals.textPERatioValue.text = "30"
+    }
+
     private fun setUpFeedList() {
         // Initialize RecyclerView and its adapter
         val emptyFeedList: List<FeedDto> = emptyList()
-        feedAdapter = FeedAdapter(supportFragmentManager,lifecycle,emptyFeedList)
+        feedAdapter = FeedAdapter(supportFragmentManager, lifecycle, emptyFeedList)
         // Set layout manager for the RecyclerView
         binding.rvEquityPost.layoutManager = LinearLayoutManager(this)
 
