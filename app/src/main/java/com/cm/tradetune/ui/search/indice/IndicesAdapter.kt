@@ -1,6 +1,7 @@
 package com.cm.tradetune.ui.search.indice
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cm.tradetune.R
 import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.databinding.ItemTrendingBinding
+import com.cm.tradetune.ui.securities.EquityDetail
 
 class IndicesAdapter (private var trendingIndices: List<EquityDto>) :
     RecyclerView.Adapter<IndicesAdapter.ViewHolder>() {
@@ -46,6 +48,13 @@ class IndicesAdapter (private var trendingIndices: List<EquityDto>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(trendingIndices[position])
+
+        holder.itemView.setOnClickListener {
+            val context = holder.context
+            val intent =  Intent(context, EquityDetail::class.java)
+            intent.putExtra("equity_id", trendingIndices[position].id) // pass data to EquityDetail
+            context.startActivity(intent)
+        }
 
     }
 

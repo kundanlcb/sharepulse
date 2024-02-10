@@ -1,9 +1,9 @@
 <!-- user_item.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="96dp"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     android:padding="8dp">
 
     <!-- User Profile Picture -->
@@ -11,32 +11,32 @@
         android:id="@+id/imageViewProfilePicture"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
-        android:layout_gravity="center_horizontal"/>
+        android:src="@drawable/ic_launcher_background" />
 
     <!-- User Name -->
     <TextView
-        android:maxLines="1"
-        android:maxWidth="80dp"
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:maxWidth="80dp"
+        android:maxLines="1"
         android:text="User Name"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"
-        android:gravity="center"/>
+        android:textStyle="bold" />
 
     <!-- User Username -->
     <TextView
-        android:maxLines="1"
-        android:maxWidth="80dp"
         android:id="@+id/textViewUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:textSize="14sp"
         android:layout_marginTop="4dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:maxWidth="80dp"
+        android:maxLines="1"
+        android:text="Username"
+        android:textSize="14sp" />
 </LinearLayout>

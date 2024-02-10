@@ -1,5 +1,6 @@
 package com.cm.tradetune.ui.search.user
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cm.tradetune.data.model.UserDto
 import com.cm.tradetune.databinding.ItemUserSearchBinding
 import com.cm.tradetune.databinding.ItemUserSuggestionBinding
+import com.cm.tradetune.ui.profile.Profile
 import com.cm.tradetune.ui.search.placeholder.PlaceholderContent.PlaceholderItem
 
 class UserListAdapter(
@@ -35,6 +37,12 @@ class UserListAdapter(
         val item = values[position]
         holder.tvUserName.text = item.userName
         holder.tvName.text = item.firstName
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent: Intent =  Intent(context, Profile::class.java)
+            intent.putExtra("profile_content", item.userName) // pass data to FeedDetailActivity
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = values.size
