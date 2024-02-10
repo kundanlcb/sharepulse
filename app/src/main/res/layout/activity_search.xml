@@ -21,30 +21,22 @@
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:iconifiedByDefault="false"
-            app:queryHint="Search Indices"
-            app:searchIcon="@null"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            />
+            app:iconifiedByDefault="false"
+            app:queryHint="Search Indices"
+            app:searchIcon="@null" />
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Your RecyclerView or other UI elements below the Toolbar -->
     <!-- ... -->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUserSearch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:textColor="@color/primary_dark"
-        app:tabGravity="fill"
-        app:tabIndicatorColor="#FFC107"
-        app:tabMode="fixed"
-        app:tabSelectedTextColor="#FFC107"
-        app:tabTextColor="@color/primary_dark" />
+        android:layout_height="wrap_content" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEquitySearch"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 </LinearLayout>

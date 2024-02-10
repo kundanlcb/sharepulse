@@ -14,7 +14,7 @@ class IndicesViewModel(application: Application) : AndroidViewModel(application)
 
     init {
         // Load JSON data and parse into Feed objects
-        val jsonString = JsonUtil.loadJsonFromAsset(application.applicationContext, "trending.json")
+        val jsonString = JsonUtil.loadJsonFromAsset(application.applicationContext, "equities.json")
         val indicesListType = object : TypeToken<List<EquityDto>>() {}.type
         val indicesList = Gson().fromJson<List<EquityDto>>(jsonString, indicesListType)
 

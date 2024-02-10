@@ -51,6 +51,10 @@ class EquityDetail : AppCompatActivity() {
         layoutSecurityFundamentals.textPERatioValue.text = "30"
     }
 
+    private fun setChart(){
+        
+    }
+
     private fun setUpFeedList() {
         // Initialize RecyclerView and its adapter
         val emptyFeedList: List<FeedDto> = emptyList()

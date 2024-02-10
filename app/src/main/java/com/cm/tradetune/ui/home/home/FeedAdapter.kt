@@ -19,6 +19,7 @@ import com.cm.tradetune.ui.feed.PollDetails
 import com.cm.tradetune.ui.profile.Profile
 import com.cm.tradetune.util.TimeUtil.Companion.toMillis
 import com.cm.tradetune.util.toTimeAgo
+import de.hdodenhof.circleimageview.CircleImageView
 
 
 class FeedAdapter(private val fragmentManager: FragmentManager, private val lifecycle: Lifecycle, private var feedList: List<FeedDto>) :
@@ -34,7 +35,7 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
 
 
     inner class PollViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val userDpImageView: ImageView=itemView.findViewById(R.id.userDpImageView)
+        val userDpImageView: CircleImageView=itemView.findViewById(R.id.userDpImageView)
         val likeBtn: ImageButton = itemView.findViewById(R.id.likeButton)
         val repostButton: ImageButton = itemView.findViewById(R.id.repostButton)
         val pollQuestionTextView: TextView = itemView.findViewById(R.id.pollQuestionTextView)
@@ -64,7 +65,7 @@ class FeedAdapter(private val fragmentManager: FragmentManager, private val life
     }
 
     inner class ContentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val userDpImageView: ImageView=itemView.findViewById(R.id.userDpImageView)
+        val userDpImageView: CircleImageView=itemView.findViewById(R.id.userDpImageView)
         val likeBtn: ImageButton = itemView.findViewById(R.id.likeButton)
         val repostButton: ImageButton = itemView.findViewById(R.id.repostButton)
         val contentTextView: TextView = itemView.findViewById(R.id.contentTextView)

@@ -21,6 +21,6 @@
         android:id="@+id/recycler_trend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_horizontal_margin" />
+         />
 
 </LinearLayout>

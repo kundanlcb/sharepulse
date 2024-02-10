@@ -38,7 +38,7 @@
                     android:padding="16dp">
 
                     <!-- User DP, name, and username -->
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/imageViewProfile"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
