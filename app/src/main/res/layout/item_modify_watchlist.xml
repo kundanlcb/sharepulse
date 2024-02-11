@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginTop="1dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSecurityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company Name"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSecuritySymbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stock Ticker"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/addSecurityButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_white"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/removeSecurityButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_white"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

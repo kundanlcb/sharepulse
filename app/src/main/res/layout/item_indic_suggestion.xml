@@ -13,8 +13,8 @@
     <!-- ImageView for indices image -->
     <ImageView
         android:id="@+id/imageViewIndices"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:src="@drawable/ic_indices"
         android:contentDescription="@string/indices_image_description"/>
 

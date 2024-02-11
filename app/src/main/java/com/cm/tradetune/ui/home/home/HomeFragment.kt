@@ -13,6 +13,7 @@ import com.cm.tradetune.data.model.MarketItemDto
 import com.cm.tradetune.databinding.FragmentHomeBinding
 import com.cm.tradetune.ui.feed.CreateFeed
 import com.cm.tradetune.ui.feed.IndicesSelection
+import com.cm.tradetune.ui.watchlist.ManageWatchList
 
 class HomeFragment : Fragment() {
 
@@ -69,7 +70,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun navigateToAddIndices() {
-        val intent = Intent(activity, IndicesSelection::class.java)
+        val intent = Intent(activity, ManageWatchList::class.java)
         startActivity(intent)
     }
 
