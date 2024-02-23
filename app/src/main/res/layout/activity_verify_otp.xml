@@ -2,19 +2,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:padding="16dp">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/logoImageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_launcher_foreground"
         app:layout_constraintBottom_toTopOf="@+id/mobileNumberText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/mobileNumberText"
@@ -29,8 +28,8 @@
     <ImageButton
         android:layout_marginStart="8dp"
         android:id="@+id/editNumberButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:background="?android:attr/selectableItemBackground"
         android:src="@android:drawable/ic_menu_edit"
         app:layout_constraintStart_toEndOf="@id/mobileNumberText"
@@ -48,23 +47,11 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <EditText
-            android:id="@+id/otpDigit1"
+            android:gravity="center"
+            android:id="@+id/otpDigit"
             style="@style/SquareOTPInputBox" />
 
-        <EditText
-            android:id="@+id/otpDigit2"
-            style="@style/SquareOTPInputBox"
-            android:layout_marginStart="12dp" />
 
-        <EditText
-            android:id="@+id/otpDigit3"
-            style="@style/SquareOTPInputBox"
-            android:layout_marginStart="12dp" />
-
-        <EditText
-            android:id="@+id/otpDigit4"
-            style="@style/SquareOTPInputBox"
-            android:layout_marginStart="12dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <Button

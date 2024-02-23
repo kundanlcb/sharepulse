@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TradeTune" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/rust</item>
+        <item name="colorPrimary">@color/primary</item>
 
     </style>
     <style name="Theme.TradeTune" parent="Base.Theme.TradeTune" />

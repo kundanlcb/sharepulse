@@ -1,7 +1,9 @@
 package com.cm.tradetune.ui.feed
 
+import android.Manifest
 import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
@@ -12,6 +14,7 @@ import com.cm.tradetune.data.model.HelloMessage
 import com.cm.tradetune.websocket.WebSocketManager
 import com.cm.tradetune.databinding.ActivityCreateFeedBinding
 import com.cm.tradetune.di.DaggerAppComponent
+import com.cm.tradetune.util.PermissionUtils
 import com.cm.tradetune.util.Utils.generateUniqueId
 import com.cm.tradetune.util.Utils.getCurrentTime
 import javax.inject.Inject
@@ -28,6 +31,7 @@ class CreateFeed : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateFeedBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.editTextFeed.requestFocus()
         webSocketManager = WebSocketManager()
         binding.llCreateFeedPoll.visibility = View.GONE
         // Set up the toolbar
@@ -54,6 +58,18 @@ class CreateFeed : AppCompatActivity() {
             binding.option3.visibility = View.VISIBLE
         }
 
+        binding.buttonAttachImage.setOnClickListener {
+            if (PermissionUtils.checkPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                openImagePicker()
+            } else {
+                PermissionUtils.requestPermission(
+                    this,
+                    Manifest.permission.CAMERA,
+                    PermissionUtils.REQUEST_CODE_CAMERA_PERMISSION
+                )
+            }
+
+        }
 
         // Set up click listener for selecting indices using ActivityResultLauncher
         binding.buttonSelectIndices.setOnClickListener {
@@ -127,7 +143,36 @@ class CreateFeed : AppCompatActivity() {
         }
     }
 
+    private val selectImageLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val data: Intent? = result.data
+            // Handle the result data from the indices selection activity
+            val selectedIndices = data?.getStringExtra("selected_indices")
+            binding.buttonSelectIndices.text = selectedIndices
+            // Do something with selectedIndices
+        }
+    }
+
+    private fun openImagePicker() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        requestImageLauncher.launch(intent)
+    }
+
+    private val requestImageLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val selectedImageUri = result.data?.data
+                // Handle the selected image URI
+            } else {
+                // Image selection cancelled or failed, handle accordingly
+            }
+        }
+
     companion object {
         const val REQUEST_CODE_SELECT_INDICES = 123 // Use any unique request code
     }
+
+
 }
