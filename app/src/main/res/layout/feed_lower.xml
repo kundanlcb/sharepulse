@@ -1,17 +1,19 @@
 <!-- res/layout/item_lower.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="end|center_vertical"
     android:orientation="horizontal"
-    android:layout_marginTop="@dimen/activity_horizontal_margin"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
     android:paddingStart="@dimen/activity_horizontal_margin"
-    android:paddingEnd="@dimen/activity_horizontal_margin"
-    android:gravity="end|center_vertical">
+    android:paddingEnd="@dimen/activity_horizontal_margin">
+
     <ImageView
-        android:src="@drawable/selector_up_down"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:src="@drawable/selector_up_down" />
+
     <TextView
         android:id="@+id/textFeedSecurity"
         android:layout_width="wrap_content"
@@ -22,66 +24,66 @@
         android:textSize="14sp" />
 
     <ImageButton
-        android:layout_marginStart="8dp"
         android:id="@+id/likeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/selector_like_dislike"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="@string/like_button"
-        android:layout_marginEnd="4dp"/>
+        android:src="@drawable/selector_like_dislike" />
 
     <TextView
         android:id="@+id/tvLikeCount"
-        android:layout_marginEnd="8dp"
-        android:text="232"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="232" />
 
     <!-- Like Button -->
     <ImageButton
-        android:layout_marginStart="8dp"
         android:id="@+id/commentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_comment"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="@string/like_button"
-        android:layout_marginEnd="4dp"/>
+        android:src="@drawable/ic_comment" />
 
     <TextView
         android:id="@+id/tvCommentCount"
-        android:layout_marginEnd="8dp"
-        android:text="232"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="232" />
 
     <!-- Repost Button -->
     <ImageButton
-        android:layout_marginStart="8dp"
         android:id="@+id/repostButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/selector_post_repost"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="Repost"
-        android:layout_marginEnd="4dp"/>
+        android:src="@drawable/selector_post_repost" />
 
     <TextView
         android:id="@+id/tvRepostCount"
-        android:layout_marginEnd="8dp"
-        android:text="43"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="43" />
 
     <!-- Share Button -->
     <ImageButton
-        android:layout_marginStart="8dp"
         android:id="@+id/shareButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_share_24"
+        android:layout_marginStart="8dp"
         android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="Share"/>
+        android:contentDescription="Share"
+        android:src="@drawable/ic_share_24" />
 
 </LinearLayout>

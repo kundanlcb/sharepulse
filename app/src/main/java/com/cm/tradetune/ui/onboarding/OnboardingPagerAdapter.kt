@@ -1,14 +1,12 @@
-package com.cm.tradetune.ui.search
+package com.cm.tradetune.ui.onboarding
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.cm.tradetune.ui.search.feed.PostListFragment
-import com.cm.tradetune.ui.search.indice.IndicesFragment
-import com.cm.tradetune.ui.search.user.UserFragment
 
-class SearchPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
+class OnboardingPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
 
     override fun getItemCount(): Int {

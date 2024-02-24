@@ -4,6 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
     tools:context=".ui.onboarding.OnBoarding">
+    <androidx.appcompat.widget.SearchView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Indices"
+        app:searchIcon="@null" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

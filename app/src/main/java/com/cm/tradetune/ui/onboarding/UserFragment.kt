@@ -1,4 +1,4 @@
-package com.cm.tradetune.ui.search.user
+package com.cm.tradetune.ui.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cm.tradetune.data.model.UserDto
 import com.cm.tradetune.databinding.FragmentUserBinding
+import com.cm.tradetune.ui.search.user.UserListAdapter
+import com.cm.tradetune.ui.search.user.UserViewModel
 
 /**
  * A fragment representing a list of Items.

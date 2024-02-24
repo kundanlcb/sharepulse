@@ -1,4 +1,4 @@
-package com.cm.tradetune.ui.search.indice
+package com.cm.tradetune.ui.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cm.tradetune.data.model.EquityDto
 import com.cm.tradetune.databinding.FragmentIndicesBinding
+import com.cm.tradetune.ui.search.indice.IndicesAdapter
+import com.cm.tradetune.ui.search.indice.IndicesViewModel
 
 /**
  * A fragment representing a list of Items.
